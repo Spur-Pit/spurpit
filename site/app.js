@@ -17,7 +17,7 @@ const SEL = {
   approve: '0x095ea7b3',
 };
 
-const EMBEDDED_SPUR_CA = '';
+const EMBEDDED_SPUR_CA = '0x8ea268195f357E6c48432d105f51820180742077';
 
 const state = {
   wallet: '',

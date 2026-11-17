@@ -1,5 +1,7 @@
 # SPUR Pit (`$SPURPIT`) — 1v1 On-Chain ETH Duels on Robinhood Chain
 
+- **`$SPURPIT` Contract (Robinhood Chain, 4663):** [`0x8ea268195f357E6c48432d105f51820180742077`](https://ponsfamily.com/launchpad/0x8ea268195f357E6c48432d105f51820180742077)
+
 **Two wallets enter. The chain pays one.**
 
 - **Arena:** https://spurpit.family
