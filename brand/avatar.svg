@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="22 20 356 356">
+  <rect x="0" y="0" width="400" height="400" fill="#0d0b0a"/>
+  
+  <defs>
+    <linearGradient id="combGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4d3d"/>
+      <stop offset="60%" stop-color="#d9291c"/>
+      <stop offset="100%" stop-color="#8f140c"/>
+    </linearGradient>
+    <linearGradient id="plumageDark" x1="0%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#252c2a"/>
+      <stop offset="50%" stop-color="#151918"/>
+      <stop offset="100%" stop-color="#0b0c0c"/>
+    </linearGradient>
+    <linearGradient id="plumageTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#274e47"/>
+      <stop offset="100%" stop-color="#112421"/>
+    </linearGradient>
+    <linearGradient id="brassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff0b8"/>
+      <stop offset="38%" stop-color="#ebb434"/>
+      <stop offset="78%" stop-color="#b87c14"/>
+      <stop offset="100%" stop-color="#6e4506"/>
+    </linearGradient>
+    <linearGradient id="beakGrad" x1="0%" y1="0%" x2="100%" y2="90%">
+      <stop offset="0%" stop-color="#ffd97d"/>
+      <stop offset="55%" stop-color="#e39c22"/>
+      <stop offset="100%" stop-color="#945b08"/>
+    </linearGradient>
+    <linearGradient id="tapeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f6efe2"/>
+      <stop offset="100%" stop-color="#cbbba2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Subtle brass arena ring halo behind character -->
+  <circle cx="200" cy="208" r="154" fill="#171310" stroke="#ebb434" stroke-opacity=".26" stroke-width="2.5"/>
+  <circle cx="200" cy="208" r="144" fill="none" stroke="#f4ecdc" stroke-opacity=".08" stroke-dasharray="6 6"/>
+
+  <!-- Jagged Hackle / Neck Collar Feathers -->
+  <path d="M92 270 C84 218, 104 162, 146 136 L252 146 C288 182, 298 236, 286 292 L258 274 L244 308 L214 284 L192 318 L166 286 L134 308 L122 274 Z"
+        fill="url(#plumageDark)" stroke="#070606" stroke-width="6" stroke-linejoin="round"/>
+  <!-- Iridescent dark-emerald feather highlights -->
+  <path d="M116 258 C114 214, 130 176, 158 154 L178 214 L152 268 L136 248 Z" fill="url(#plumageTeal)"/>
+  <path d="M236 168 C258 192, 270 226, 268 264 L244 248 L234 276 L216 226 Z" fill="url(#plumageTeal)"/>
+
+  <!-- Fighter's Taped Wing / Shoulder Guard (Left-Bottom Foreground) -->
+  <path d="M74 316 C78 268, 118 246, 166 258 C202 266, 224 294, 220 338 L92 348 Z"
+        fill="url(#plumageDark)" stroke="#070606" stroke-width="6" stroke-linejoin="round"/>
+  <!-- Athletic Knuckle/Wing Boxer Wraps -->
+  <path d="M98 286 L196 272 L204 296 L94 312 Z" fill="url(#tapeGrad)" stroke="#070606" stroke-width="4.5" stroke-linejoin="round"/>
+  <path d="M92 310 L210 296 L214 322 L88 336 Z" fill="url(#tapeGrad)" stroke="#070606" stroke-width="4.5" stroke-linejoin="round"/>
+  <line x1="126" y1="283" x2="142" y2="328" stroke="#9e8e76" stroke-width="2.5"/>
+  <line x1="168" y1="278" x2="180" y2="324" stroke="#9e8e76" stroke-width="2.5"/>
+
+  <!-- Battle-Notched Crimson Comb (4 jagged peaks + V-battle-nick) -->
+  <path d="M132 146
+           C114 114, 122 74, 148 68
+           C158 66, 166 82, 170 92
+           C178 62, 198 44, 218 52
+           L212 76 L226 64
+           C242 56, 262 68, 258 94
+           C276 84, 294 96, 286 122
+           C278 144, 252 154, 232 154 Z"
+        fill="url(#combGrad)" stroke="#070606" stroke-width="6" stroke-linejoin="round"/>
+  <!-- Comb inner highlight ridge -->
+  <path d="M144 126 C138 104, 144 84, 154 82 C162 82, 168 98, 174 106 C182 82, 196 66, 208 68"
+        fill="none" stroke="#ff8a7a" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Head Skull & Cheek -->
+  <path d="M136 142 C136 112, 176 102, 224 112 C258 120, 274 148, 268 186 C262 220, 228 242, 182 238 C146 234, 132 196, 136 142 Z"
+        fill="#1a201f" stroke="#070606" stroke-width="6" stroke-linejoin="round"/>
+
+  <!-- Crimson Wattle under Beak -->
+  <path d="M226 206 C218 238, 236 268, 258 262 C276 256, 278 224, 258 202 Z"
+        fill="url(#combGrad)" stroke="#070606" stroke-width="5.5" stroke-linejoin="round"/>
+
+  <!-- Fierce Hooked Fighter Beak (Upper + Smirking Lower) -->
+  <path d="M244 152 C284 150, 322 168, 334 198 C306 202, 274 202, 242 194 Z"
+        fill="url(#beakGrad)" stroke="#070606" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M244 194 C272 200, 298 202, 314 198 C302 218, 274 222, 242 210 Z"
+        fill="#b87611" stroke="#070606" stroke-width="5.5" stroke-linejoin="round"/>
+  <!-- Beak gleam & nostril -->
+  <path d="M256 162 C282 162, 306 172, 318 186" fill="none" stroke="#fff3c4" stroke-width="3.5" stroke-linecap="round"/>
+  <ellipse cx="268" cy="174" rx="5" ry="3" transform="rotate(14 268 174)" fill="#4a2b03"/>
+
+  <!-- Scowling Brow & Piercing Gold Eye -->
+  <path d="M178 148 L244 162 L238 188 C216 196, 188 190, 180 170 Z" fill="#0b0c0c"/>
+  <ellipse cx="212" cy="171" rx="18" ry="15" fill="#ebb434" stroke="#070606" stroke-width="4"/>
+  <ellipse cx="217" cy="171" rx="6.5" ry="11" fill="#070606"/>
+  <circle cx="212" cy="166" r="4" fill="#ffffff"/>
+  <!-- Heavy angry brow ridge -->
+  <path d="M170 140 L250 160 L246 170 L168 152 Z" fill="#e5392d" stroke="#070606" stroke-width="4.5" stroke-linejoin="round"/>
+
+  <!-- Crossed Cheek Bandage / Plaster (Underground Brawler Signature) -->
+  <g transform="translate(166 198) rotate(-18)">
+    <rect x="-22" y="-7" width="44" height="14" rx="3" fill="url(#tapeGrad)" stroke="#070606" stroke-width="3.5"/>
+    <line x1="-8" y1="-6" x2="-8" y2="6" stroke="#b5a388" stroke-width="2"/>
+    <line x1="8" y1="-6" x2="8" y2="6" stroke="#b5a388" stroke-width="2"/>
+  </g>
+
+  <!-- FOREGROUND HERO ELEMENT: Gleaming Curved Brass Fighting Spur Blade + Leather Cuff -->
+  <g transform="translate(18 6)">
+    <!-- Leather leg cuff -->
+    <path d="M196 312 L242 298 L252 334 L204 346 Z" fill="#593315" stroke="#070606" stroke-width="5" stroke-linejoin="round"/>
+    <circle cx="223" cy="322" r="5" fill="#ebb434" stroke="#070606" stroke-width="2.5"/>
+    <!-- Curved razor brass spur blade -->
+    <path d="M238 304
+             C278 294, 322 262, 344 218
+             C342 268, 306 318, 248 332 Z"
+          fill="url(#brassGrad)" stroke="#070606" stroke-width="5.5" stroke-linejoin="round"/>
+    <!-- Razor bevel highlight + glint star -->
+    <path d="M248 312 C282 300, 314 274, 334 238" fill="none" stroke="#fff9de" stroke-width="3" stroke-linecap="round"/>
+    <path d="M344 218 L348 202 L352 218 L368 222 L352 226 L348 242 L344 226 L328 222 Z" fill="#fff6cc"/>
+  </g>
+
+</svg>

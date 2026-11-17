@@ -1,0 +1,23 @@
+name = "spurpit"
+main = "src/index.js"
+compatibility_date = "2026-11-16"
+workers_dev = true
+
+routes = [
+  { pattern = "spurpit.family", custom_domain = true },
+  { pattern = "www.spurpit.family", custom_domain = true },
+]
+
+[assets]
+directory = "../site"
+binding = "ASSETS"
+run_worker_first = ["/v1/*", "/card/*"]
+
+[vars]
+CHAIN_ID = "4663"
+RH_RPC_URL = "https://rpc.mainnet.chain.robinhood.com"
+PONS_FACTORY = "0x7eD598BcEf8bd9Edd8C97A195C6d13f40801EC7e"
+PIT_ADDRESS = ""
+SPUR_ADDRESS = ""
+X_HANDLE = "spurpitfamily"
+SITE_DOMAIN = "spurpit.family"

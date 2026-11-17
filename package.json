@@ -1,0 +1,21 @@
+{
+  "name": "spurpit",
+  "version": "0.1.0",
+  "description": "SPUR Pit: non-custodial 1v1 ETH duels settled directly by PonsV2 state on Robinhood Chain (4663).",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spur-Pit/spurpit.git"
+  },
+  "scripts": {
+    "compile": "node contracts/compile.mjs",
+    "test": "node contracts/test.mjs",
+    "dev": "node worker/dev-server.mjs"
+  },
+  "devDependencies": {
+    "solc": "^0.8.24",
+    "viem": "^2.21.0",
+    "wrangler": "^4.0.0"
+  }
+}

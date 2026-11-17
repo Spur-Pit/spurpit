@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPUR · 1v1 On-Chain ETH Duels on Robinhood Chain</title>
+  <meta name="description" content="Two wallets enter. The chain pays one. Lock 1v1 ETH stakes on live Pons bonding curves, graduations, token clashes, and whale hand checks. Settled directly on Robinhood Chain.">
+  <meta property="og:title" content="SPUR · Two wallets enter. The chain pays one.">
+  <meta property="og:description" content="Trustless 1v1 ETH duels on Robinhood Chain Pons markets. Every settled pot streams ETH to $SPURPIT stakers and auto-burns $SPURPIT to 0x…dEaD.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://spurpit.family/">
+  <meta property="og:image" content="https://spurpit.family/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@spurpitfamily">
+  <meta name="twitter:image" content="https://spurpit.family/og-card.png">
+  <link rel="canonical" href="https://spurpit.family/">
+  <link rel="icon" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..600;1,9..144,480..540&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="top-shell">
+    <div class="rail">
+      <div class="rail-in">
+        <div class="rail-group">
+          <span><i class="dot"></i>Robinhood Chain · ID 4663</span>
+          <span>SpurPit <b id="rail-pit">…</b></span>
+          <span>PonsV2 Direct Settlement · Zero Oracles</span>
+        </div>
+        <div class="rail-group">
+          <span>Pit Volume <b class="brass" id="rail-vol">0 ETH</b></span>
+          <span>Burned <b class="crimson" id="rail-burned">0 $SPURPIT</b></span>
+          <a href="https://x.com/spurpitfamily" target="_blank" rel="noopener" style="color:var(--brass)">@spurpitfamily</a>
+        </div>
+      </div>
+    </div>
+    <header class="nav">
+      <a class="brand" href="#">
+        <img src="/mark.svg" width="34" height="34" alt="SPUR">
+        <span>SPUR<small>THE PIT</small></span>
+      </a>
+      <nav class="nav-links">
+        <a class="active" href="#pit">Live Pit</a>
+        <a href="#engine">$SPURPIT Engine</a>
+        <a href="#rules">Settlement Rules</a>
+      </nav>
+      <div class="nav-right">
+        <a class="btn sm ghost-brass" id="nav-x" href="https://x.com/spurpitfamily" target="_blank" rel="noopener">X · @spurpitfamily</a>
+        <a class="btn sm" href="https://github.com/Spur-Pit/spurpit" target="_blank" rel="noopener">GitHub</a>
+        <button class="btn brass" id="btn-connect" type="button">Connect wallet</button>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-left">
+          <div>
+            <p class="eyebrow">Talk is cheap · Put ETH on the spur</p>
+            <h1>Two wallets enter.<br><em>The chain pays one.</em></h1>
+            <p class="lede">Every hour on Pons, bulls and skeptics argue whether a token will graduate, hold its curve, or get dumped by a whale. SPUR locks both wallets into an equal ETH pot and settles directly from <code>PonsV2LaunchFactory</code> state on Robinhood Chain—no admin keys, no oracle committees.</p>
+            <div class="hero-cta">
+              <a class="btn brass lg" href="#pit">Open a 1v1 Bout</a>
+              <a class="btn lg" href="#engine">Stake $SPURPIT for ETH</a>
+            </div>
+          </div>
+
+          <div class="ca-strip">
+            <span class="lbl">$SPURPIT</span>
+            <code id="ca-code">ANNOUNCING AT PONS LAUNCH</code>
+            <div style="display:flex;gap:8px">
+              <button class="btn sm ghost-brass" id="btn-copy-ca" type="button" hidden>Copy CA</button>
+              <a class="btn sm" id="link-pons" href="https://ponsfamily.com" target="_blank" rel="noopener" hidden>Pons →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="mascot-card">
+            <img src="/mark.svg" width="136" height="136" alt="SPUR fighting rooster mascot">
+            <div class="mascot-rules">
+              <p class="eyebrow brass">Why $SPURPIT moves with every bout</p>
+              <div><strong>1.25% ETH → RINGSIDE STAKERS</strong> Claimable in native ETH on every settled pot, zero lockup.</div>
+              <div><strong>1.25%+ ETH → AUTO-BURN</strong> <code>ignite()</code> buys <code>$SPURPIT</code> on Pons curve / V4 straight to <code>0x…dEaD</code>.</div>
+              <div><strong>0.50% ETH → PROMOTER CUT</strong> Paid in ETH to <code>≥1M $SPURPIT</code> stakers whose bouts fill.</div>
+            </div>
+          </div>
+
+          <div class="ca-strip" style="margin-top:0;border-left-color:var(--crimson)">
+            <span class="lbl" style="color:var(--crimson2)">INSTANT KO</span>
+            <span style="color:var(--dim)">Graduation duels &amp; Whale Hand Checks settle the exact block the curve graduates or a watched bag sells 1 token.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap scoreboard">
+        <div><span>Bouts Created</span><b id="st-bouts">0</b></div>
+        <div><span>Locked ETH Volume</span><b class="brass" id="st-vol">0 ETH</b></div>
+        <div><span>Ringside Staked</span><b id="st-staked">0 $SPURPIT</b></div>
+        <div><span>ETH Paid to Stakers</span><b id="st-eth-yield">0 ETH</b></div>
+        <div><span>$SPURPIT Burned (0x…dEaD)</span><b class="crimson" id="st-burned">0</b></div>
+      </div>
+    </section>
+
+    <section class="arena-band" id="pit">
+      <div class="wrap arena-grid">
+        <!-- Left Column: Open a Bout -->
+        <aside class="builder-col">
+          <div class="sec-title">
+            <h2>Cut a Challenge</h2>
+            <span class="sub-mono">1v1 ETH Escrow</span>
+          </div>
+
+          <div class="mode-tabs">
+            <button class="mode-tab on" type="button" data-mode="0">
+              <strong>01 · GRADUATION</strong>
+              <small>Graduates vs stays on curve</small>
+            </button>
+            <button class="mode-tab" type="button" data-mode="1">
+              <strong>02 · CURVE LINE</strong>
+              <small>ETH reserve Over / Under</small>
+            </button>
+            <button class="mode-tab" type="button" data-mode="2">
+              <strong>03 · CLASH</strong>
+              <small>Token A vs Token B</small>
+            </button>
+            <button class="mode-tab" type="button" data-mode="3">
+              <strong>04 · HAND CHECK</strong>
+              <small>Dev / whale holds 100%</small>
+            </button>
+          </div>
+
+          <form id="form-open">
+            <div class="field">
+              <label for="in-token-a">Pons Token Address <span>0x… on Robinhood Chain</span></label>
+              <input id="in-token-a" placeholder="0x… paste any active Pons token" spellcheck="false" required>
+              <div class="token-chips" id="pons-chips"></div>
+              <div class="token-probe" id="probe-a" hidden></div>
+            </div>
+
+            <div class="field" id="field-target-eth" hidden>
+              <label for="in-target-eth">Reserve Line (ETH) <span>max 4.20 ETH graduation</span></label>
+              <input id="in-target-eth" inputmode="decimal" value="2.10" placeholder="2.10">
+            </div>
+
+            <div class="field" id="field-token-b" hidden>
+              <label for="in-token-b">Rival Pons Token B <span>head-to-head</span></label>
+              <input id="in-token-b" placeholder="0x… second Pons token" spellcheck="false">
+              <div class="token-probe" id="probe-b" hidden></div>
+            </div>
+
+            <div class="field" id="field-holder" hidden>
+              <label for="in-holder">Watched Wallet <span>blank = token deployer</span></label>
+              <input id="in-holder" placeholder="Leave empty for deployer, or paste whale 0x…" spellcheck="false">
+            </div>
+
+            <div class="field">
+              <label>Pick Your Corner</label>
+              <div class="side-toggle">
+                <button class="side-btn on-a" id="side-a" type="button">YES · Graduates</button>
+                <button class="side-btn" id="side-b" type="button">NO · Stays on Curve</button>
+              </div>
+            </div>
+
+            <div class="split-inputs">
+              <div class="field">
+                <label for="in-stake">Stake per Corner <span>ETH</span></label>
+                <input id="in-stake" inputmode="decimal" value="0.01" placeholder="0.01" required>
+              </div>
+              <div class="field">
+                <label for="in-join">Match Window</label>
+                <select id="in-join">
+                  <option value="15">15 minutes</option>
+                  <option value="60" selected>1 hour</option>
+                  <option value="240">4 hours</option>
+                  <option value="1440">24 hours</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="split-inputs">
+              <div class="field">
+                <label for="in-duration">Settlement Bell</label>
+                <select id="in-duration">
+                  <option value="2">2 hours</option>
+                  <option value="6" selected>6 hours</option>
+                  <option value="24">24 hours</option>
+                  <option value="72">3 days</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="in-opponent">Named Rival <span>optional</span></label>
+                <input id="in-opponent" placeholder="0x… or Open Pit" spellcheck="false">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="in-callout">On-chain Callout <span>max 140 bytes</span></label>
+              <input id="in-callout" maxlength="140" placeholder="Put ETH where your timeline is.">
+            </div>
+
+            <button class="btn brass lg" style="width:100%" type="submit">Lock ETH &amp; Open Bout</button>
+          </form>
+        </aside>
+
+        <!-- Right Column: Live Bouts Feed -->
+        <div class="pit-col">
+          <div class="sec-title">
+            <h2>The Pit</h2>
+            <span class="sub-mono">Permissionless Settlement · Instant KO</span>
+          </div>
+
+          <div class="filter-bar">
+            <div class="filters">
+              <button class="flt on" type="button" data-flt="all">All Bouts</button>
+              <button class="flt" type="button" data-flt="open">Open Corner</button>
+              <button class="flt" type="button" data-flt="live">Live</button>
+              <button class="flt" type="button" data-flt="ko">KO Ready</button>
+              <button class="flt" type="button" data-flt="mine">My Bouts</button>
+              <button class="flt" type="button" data-flt="settled">Settled</button>
+            </div>
+          </div>
+
+          <div class="bouts-list" id="bouts-list">
+            <div class="ticket"><div class="ticket-body"><p class="mono" style="margin:0;color:var(--dim)">Reading SpurPit state from Robinhood Chain…</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="engine-band" id="engine">
+      <div class="wrap engine-in">
+        <p class="eyebrow brass">$SPURPIT On-Chain Utility · No Discount Gimmicks</p>
+        <h2 style="font:560 36px/1.08 var(--display);margin:8px 0 6px">Real ETH to Ringside. Autonomous fire to 0x…dEaD.</h2>
+        <p style="color:var(--dim);max-width:700px;margin:0">Every settled pot takes a flat 3.00% cut in native ETH inside <code>SpurPit.sol</code>—zero team wallet tax, zero off-chain promises.</p>
+
+        <div class="engine-grid">
+          <!-- Ringside ETH Staking -->
+          <div class="vault-card">
+            <div class="sec-title" style="margin-bottom:10px">
+              <h2>Ringside Staking</h2>
+              <span class="sub-mono">1.25% ETH + 0.50% Promoter</span>
+            </div>
+            <p style="color:var(--dim);font-size:14px;margin:0">Stake <code>$SPURPIT</code> with zero lockup to earn <strong>1.25% of every settled pot in native ETH</strong>. Staking <strong>≥ 1,000,000 $SPURPIT</strong> also unlocks the <strong>0.50% Promoter ETH cut</strong> on every bout you open.</p>
+
+            <div class="vault-stats">
+              <div><span>Total Staked</span><b id="v-total-staked">0 $SPURPIT</b></div>
+              <div><span>Your Stake</span><b id="v-your-staked">0 $SPURPIT</b></div>
+              <div><span>Claimable ETH</span><b style="color:var(--good)" id="v-your-eth">0 ETH</b></div>
+            </div>
+
+            <div class="field">
+              <label for="in-stake-spur">$SPURPIT Amount <span id="v-bal-hint">Connect wallet</span></label>
+              <input id="in-stake-spur" inputmode="decimal" placeholder="1000000">
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn brass" id="btn-stake" type="button">Stake $SPURPIT</button>
+              <button class="btn" id="btn-unstake" type="button">Unstake</button>
+              <button class="btn ghost-brass" id="btn-claim-eth" type="button" style="margin-left:auto" disabled>Claim ETH</button>
+            </div>
+          </div>
+
+          <!-- Autonomous Burn Furnace -->
+          <div class="vault-card furnace">
+            <div class="sec-title" style="margin-bottom:10px">
+              <h2>The Burn Furnace</h2>
+              <span class="sub-mono">1.25%+ Auto-Buyback &amp; Burn</span>
+            </div>
+            <p style="color:var(--dim);font-size:14px;margin:0">At least <strong>1.25% of every pot</strong> (up to 3.00% when unstaked) accumulates in <code>burnBucket</code>. Anyone can call <code>ignite()</code>: the contract buys <code>$SPURPIT</code> on Pons curve / V4 straight to <code>0x…dEaD</code> and pays the caller a <strong>1% ETH gas bounty</strong>.</p>
+
+            <div class="vault-stats">
+              <div><span>Ready to Ignite</span><b style="color:var(--brass2)" id="f-bucket">0 ETH</b></div>
+              <div><span>ETH Spent Burning</span><b id="f-spent">0 ETH</b></div>
+              <div><span>Total Burned</span><b style="color:var(--crimson2)" id="f-burned">0 $SPURPIT</b></div>
+            </div>
+
+            <p class="mono" style="font-size:12px;color:var(--faint);margin:0 0 14px">Plus: burning <strong>50,000 $SPURPIT</strong> on any bout pins the ★ MAIN EVENT badge to the top of the pit.</p>
+            <button class="btn crimson lg" id="btn-ignite" style="width:100%" type="button" disabled>Ignite Buyback &amp; Burn (+1% ETH Caller Tip)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="engine-band" id="rules">
+      <div class="wrap engine-in">
+        <p class="eyebrow">Contract Guarantees · SpurPit.sol</p>
+        <h2 style="font:560 32px/1.1 var(--display);margin:8px 0 20px">Four fight modes. Zero human referees.</h2>
+        <div class="rules-grid">
+          <article>
+            <span class="eyebrow brass">01 · GRADUATION</span>
+            <h3>Curve Escape</h3>
+            <p>Side A wins by instant KO the exact block <code>curve.graduated()</code> flips true before the bell. If it fails to graduate by <code>resolveAt</code>, Side B takes the pot.</p>
+          </article>
+          <article>
+            <span class="eyebrow brass">02 · CURVE LINE</span>
+            <h3>Reserve Over / Under</h3>
+            <p>Reads <code>curve.realQuoteReserve()</code> in ETH directly from the Pons V2 bonding curve at the bell (or settles immediately for OVER if the token graduates early).</p>
+          </article>
+          <article>
+            <span class="eyebrow brass">03 · CLASH</span>
+            <h3>Token vs Token</h3>
+            <p>Pit two live Pons launches head-to-head. First to graduate wins by instant KO; otherwise the higher <code>realQuoteReserve()</code> at the bell takes the ETH pot.</p>
+          </article>
+          <article>
+            <span class="eyebrow brass">04 · HAND CHECK</span>
+            <h3>Whale / Dev Accountability</h3>
+            <p>Snapshots the token balance of the deployer or any named whale at opening. If even 1 wei of tokens leaves before the bell, DUMP wins by instant KO.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-in">
+      <div>SPUR PIT · Non-custodial 1v1 ETH duels settled by PonsV2 state on Robinhood Chain (4663).</div>
+      <div class="foot-links">
+        <a href="#pit">Live Pit</a>
+        <a href="#engine">$SPURPIT Engine</a>
+        <a href="https://github.com/Spur-Pit/spurpit" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://x.com/spurpitfamily" target="_blank" rel="noopener">X · @spurpitfamily</a>
+        <a href="https://robinhoodchain.blockscout.com" target="_blank" rel="noopener">Blockscout</a>
+        <a href="https://ponsfamily.com" target="_blank" rel="noopener">Pons</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

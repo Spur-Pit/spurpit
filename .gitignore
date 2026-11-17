@@ -1,0 +1,10 @@
+node_modules/
+.wrangler/
+launch.json
+cadence.json
+launch-receipt.json
+contracts/deployed.json
+brand/render-*.mjs
+worker/test-e2e.mjs
+*.log
+.DS_Store
