@@ -23,7 +23,7 @@ const state = {
   wallet: '',
   chainId: 4663,
   rpcUrl: 'https://rpc.mainnet.chain.robinhood.com',
-  pitAddress: '',
+  pitAddress: '0xd4943bd7558d3740b816a620936f7fd9ceded542',
   spurAddress: /^0x[0-9a-fA-F]{40}$/.test(EMBEDDED_SPUR_CA) ? EMBEDDED_SPUR_CA.toLowerCase() : '',
   spurBound: false,
   xHandle: '',

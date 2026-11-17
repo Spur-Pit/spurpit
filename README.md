@@ -3,6 +3,7 @@
 **Two wallets enter. The chain pays one.**
 
 - **Arena:** https://spurpit.family
+- **SpurPit Contract (Robinhood Chain, 4663):** [`0xd4943bd7558d3740b816a620936f7fd9ceded542`](https://robinhoodchain.blockscout.com/address/0xd4943bd7558d3740b816a620936f7fd9ceded542) · [Sourcify `exact_match`](https://repo.sourcify.dev/4663/0xd4943bd7558d3740b816a620936f7fd9ceded542)
 - **X:** https://x.com/spurpitfamily
 - **Source:** https://github.com/Spur-Pit/spurpit
 
